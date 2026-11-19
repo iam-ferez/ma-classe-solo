@@ -10,7 +10,8 @@ def moyenne_ponderee(notes):
         raise ValueError("La liste de notes est vide")
     total = sum(note * coef for note, coef in notes)
     somme_coefs = sum(coef for _, coef in notes)
-    return round(total / somme_coefs, 2)
+    # return round(total / somme_coefs, 2)
+    return round(total / len(notes), 2)
 
 
 def lire_notes(chemin):
